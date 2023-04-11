@@ -1,0 +1,301 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+};
+
+body{
+  background-color: #1C6DB0;
+};
+
+$primary-color:#0e1066;
+$secondary-color:#2f7bff;
+
+@mixin double-underline {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -.5vw;
+    left: 20%;
+    right: 20%;
+    height: 0.2vw;
+    background-color: $primary-color;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -1.5vw;
+    left: 35%;
+    right: 35%;
+    height: 0.15vw;
+    background-color: $primary-color;
+  }
+};
+
+.app-intro-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw;
+  width: 100%;
+  .port-title{
+    h1{
+      @include double-underline;
+      font-size: 1.7rem;
+      margin-bottom: 4vw;
+      color: $primary-color;
+    }
+  }
+  .img-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 250px;
+      height: 250px;
+    }
+  }
+  .home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+    label{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      input{
+        border: 2px solid $primary-color;
+        border-radius: 4px;
+        color: $primary-color;
+        background-color: $secondary-color;
+        padding: .7rem;
+      }
+      .input1{
+        text-align: center;
+        font-size: .55rem;
+        margin-bottom: .5vw;
+      }
+      .input1::placeholder{
+        font-size: .55rem;
+        color: $primary-color;
+      }
+      p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: .7rem;
+        margin: .5vw 0;
+        font-size: .55rem;
+        border: 2px solid $primary-color;
+        border-radius: 4px;
+        color: red;
+        background-color: $secondary-color;
+      }
+      .input1:focus{
+        outline: none;
+      }
+      .input2{
+        cursor: pointer;
+        font-size: .55rem;
+        font-weight: bold;
+        margin-top: .5vw;
+      }
+    }
+  }
+};
+
+.app-game-container{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 4vw;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% -50%);
+  .game-title{
+    .port-title{
+      h1{
+        @include double-underline;
+        color: $primary-color;
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .game-player-pc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    .player{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      h2{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $primary-color;
+        margin-bottom: .5rem;
+        font-size: 1rem;
+      }
+      .img-game-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        img{
+          width: 50px;
+          height: 50px;
+          margin: .5rem;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+    .result-sec{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1rem;
+      .player-choice{
+        display: flex;
+        justify-content: center;
+        img{
+          width: 50px;
+          height: 50px;
+          margin: .5rem;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+      .result{
+        padding: 2vw 0;
+        h3{
+          color: $primary-color;
+          padding: 2vw 0;
+          font-size: 1rem;
+        }
+      }
+      .pc-choice{
+        display: flex;
+        justify-content: center;
+        img{
+          width: 50px;
+          height: 50px;
+          margin: .5rem;
+          border-radius: 50%;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+    .pc{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 1rem;
+      h2{
+        display: flex;
+        align-items: center;
+        color: $primary-color;
+        font-size: 1rem;
+      }
+      .img-game-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        img{
+          width: 50px;
+          height: 50px;
+          margin: .5rem;
+          border-radius: 50%;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .game-score{
+      display: flex;
+      align-items: center;
+      margin-bottom: .5rem;
+      h2{
+        font-size: 1.3rem;
+        color: $primary-color;
+      }
+    }
+    .exit-game{
+      display: flex;
+      justify-content: center;
+      label{
+        .exit-btn{
+          border: 1px solid $primary-color;
+          border-radius: 4px;
+          font-weight: bold;
+          color: $primary-color;
+          background-color: $secondary-color;
+          padding: .5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+};
+
+@media screen and (max-width: 600px) {
+  #app-intro-container{
+    .port-title{
+      h1{
+        font-size: .8rem;
+      }
+    }
+  }
+  #app-game-container{
+    .game-title{
+      .port-title{
+        h1{
+          font-size: .8rem;
+        }
+      }
+    }
+    .score{
+      .game-score{
+        h2{
+          font-size: .8rem;
+        }
+      }
+      .exit-game{
+        label{
+          input{
+            padding: .2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active{
+  display: none !important;
+};

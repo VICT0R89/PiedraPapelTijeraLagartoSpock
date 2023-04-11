@@ -1,0 +1,287 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1C6DB0;
+}
+
+.app-intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw;
+  width: 100%;
+}
+.app-intro-container .port-title h1 {
+  position: relative;
+  font-size: 1.7rem;
+  margin-bottom: 4vw;
+  color: #0e1066;
+}
+.app-intro-container .port-title h1:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5vw;
+  left: 20%;
+  right: 20%;
+  height: 0.2vw;
+  background-color: #0e1066;
+}
+.app-intro-container .port-title h1:before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vw;
+  left: 35%;
+  right: 35%;
+  height: 0.15vw;
+  background-color: #0e1066;
+}
+.app-intro-container .img-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-intro-container .img-main-container img {
+  width: 250px;
+  height: 250px;
+}
+.app-intro-container .home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+}
+.app-intro-container .home-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.app-intro-container .home-container label input {
+  border: 2px solid #0e1066;
+  border-radius: 4px;
+  color: #0e1066;
+  background-color: #2f7bff;
+  padding: 0.7rem;
+}
+.app-intro-container .home-container label .input1 {
+  text-align: center;
+  font-size: 0.55rem;
+  margin-bottom: 0.5vw;
+}
+.app-intro-container .home-container label .input1::-moz-placeholder {
+  font-size: 0.55rem;
+  color: #0e1066;
+}
+.app-intro-container .home-container label .input1::placeholder {
+  font-size: 0.55rem;
+  color: #0e1066;
+}
+.app-intro-container .home-container label p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5vw 0;
+  font-size: 0.55rem;
+  border: 2px solid #0e1066;
+  border-radius: 4px;
+  color: red;
+  background-color: #2f7bff;
+}
+.app-intro-container .home-container label .input1:focus {
+  outline: none;
+}
+.app-intro-container .home-container label .input2 {
+  cursor: pointer;
+  font-size: 0.55rem;
+  font-weight: bold;
+  margin-top: 0.5vw;
+}
+
+.app-game-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 4vw;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% -50%);
+}
+.app-game-container .game-title .port-title h1 {
+  position: relative;
+  color: #0e1066;
+  font-size: 1.7rem;
+}
+.app-game-container .game-title .port-title h1:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5vw;
+  left: 20%;
+  right: 20%;
+  height: 0.2vw;
+  background-color: #0e1066;
+}
+.app-game-container .game-title .port-title h1:before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vw;
+  left: 35%;
+  right: 35%;
+  height: 0.15vw;
+  background-color: #0e1066;
+}
+.app-game-container .game-player-pc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+.app-game-container .game-player-pc .player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+.app-game-container .game-player-pc .player h2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #0e1066;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.app-game-container .game-player-pc .player .img-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.app-game-container .game-player-pc .player .img-game-container img {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.app-game-container .game-player-pc .result-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+.app-game-container .game-player-pc .result-sec .player-choice {
+  display: flex;
+  justify-content: center;
+}
+.app-game-container .game-player-pc .result-sec .player-choice img {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.app-game-container .game-player-pc .result-sec .result {
+  padding: 2vw 0;
+}
+.app-game-container .game-player-pc .result-sec .result h3 {
+  color: #0e1066;
+  padding: 2vw 0;
+  font-size: 1rem;
+}
+.app-game-container .game-player-pc .result-sec .pc-choice {
+  display: flex;
+  justify-content: center;
+}
+.app-game-container .game-player-pc .result-sec .pc-choice img {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.app-game-container .game-player-pc .pc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.app-game-container .game-player-pc .pc h2 {
+  display: flex;
+  align-items: center;
+  color: #0e1066;
+  font-size: 1rem;
+}
+.app-game-container .game-player-pc .pc .img-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.app-game-container .game-player-pc .pc .img-game-container img {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.app-game-container .score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.app-game-container .score .game-score {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.app-game-container .score .game-score h2 {
+  font-size: 1.3rem;
+  color: #0e1066;
+}
+.app-game-container .score .exit-game {
+  display: flex;
+  justify-content: center;
+}
+.app-game-container .score .exit-game label .exit-btn {
+  border: 1px solid #0e1066;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #0e1066;
+  background-color: #2f7bff;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  #app-intro-container .port-title h1 {
+    font-size: 0.8rem;
+  }
+  #app-game-container .game-title .port-title h1 {
+    font-size: 0.8rem;
+  }
+  #app-game-container .score .game-score h2 {
+    font-size: 0.8rem;
+  }
+  #app-game-container .score .exit-game label input {
+    padding: 0.2rem;
+  }
+}
+.active {
+  display: none !important;
+}/*# sourceMappingURL=styles.css.map */
